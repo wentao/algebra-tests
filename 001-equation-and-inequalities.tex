@@ -3,7 +3,7 @@
 \pagestyle{head}
 \firstpageheader{\today}{Equation and Inequalities}{Name:\enspace\makebox[1in]{\hrulefill}}
 \runningheader{}{}{}
-
+\usepackage{amsmath}
 \usepackage{fontspec,realscripts}
 \defaultfontfeatures{Ligatures=TeX}
 %\setmainfont{Meta Serif Pro}
@@ -85,5 +85,153 @@ Solve the following equations or inequalities for \(x\):
 
 \end{multicols}
 \end{questions}
+
+\newpage
+
+\begin{multicols*}{2}
+\begin{enumerate}
+
+\item \( p + 2x = q - x \)
+
+\(
+p + 3x = q
+\)
+
+\(
+3x = q - p
+\)
+
+\(\displaystyle
+x = \frac{q - p}{3}
+\)
+
+\item \(\displaystyle \frac{x}{a} + \frac{b}{c} = \frac{d}{e} \)
+
+\(\displaystyle
+\frac{x}{a} = \frac{d}{e} - \frac{b}{c}
+\)
+
+\(\displaystyle
+\frac{x}{a} = \frac{dc - be}{ce}
+\)
+
+\(\displaystyle
+x = \frac{a(dc - be)}{ce}
+\)
+
+\item \( ax + b = cx + d \)
+
+\(
+ax - cx + b = d
+\)
+
+\(
+(a - c)x = d - b
+\)
+
+\(\displaystyle
+x = \frac{d - b}{a - c}
+\)
+
+\item \(\displaystyle \frac{kx + b}{m} = \frac{nx + c}{p} \)
+
+\(
+p(kx + b) = m(nx + c)
+\)
+
+\(
+pkx + pb = mnx + mc
+\)
+
+\(
+pkx - mnx = mc - pb
+\)
+
+\(
+x(pk - mn) = mc - pb
+\)
+
+\(\displaystyle
+x = \frac{mc - pb}{pk - mn}
+\)
+
+\item \( k(x + a) + b = m(x - c) + d \)
+
+\(
+kx + ka + b = mx - mc + d
+\)
+
+\(
+kx - mx = d - b - ka + mc
+\)
+
+\(
+x(k - m) = d - b - ka + mc
+\)
+
+\(\displaystyle
+x = \frac{d - b - ka + mc}{k - m}
+\)
+
+\item \( ax - b \leq cx + d \)
+
+\(
+ax - cx - b \leq d
+\)
+
+\(
+(a - c)x - b \leq d
+\)
+
+\(
+(a - c)x \leq d + b
+\)
+
+\(\displaystyle
+x \leq \frac{d + b}{a - c} \quad \text{(assuming \( a - c > 0 \))}
+\)
+
+\item \(\displaystyle \frac{2x + 3}{5} \leq \frac{4 - 3x}{4} \)
+
+\(
+4(2x + 3) \leq 5(4 - 3x)
+\)
+
+\(
+8x + 12 \leq 20 - 15x
+\)
+
+\(
+23x + 12 \leq 20
+\)
+
+\(
+23x \leq 8
+\)
+
+\(\displaystyle
+x \leq \frac{8}{23}
+\)
+
+\item \( ax + b > 2x - 5 \)
+
+\(
+ax - 2x + b > -5
+\)
+
+\(
+(a - 2)x + b > -5
+\)
+
+\(
+(a - 2)x > -5 - b
+\)
+
+\(\displaystyle
+x > \frac{-5 - b}{a - 2} \quad \text{(assuming \( a - 2 > 0 \))}
+\)
+
+\end{enumerate}
+\end{multicols*}
 
 \end{document}
