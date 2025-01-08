@@ -1,0 +1,89 @@
+% -*- program: xelatex -*-
+\documentclass[10pt]{exam}
+\pagestyle{head}
+\firstpageheader{\today}{Equation and Inequalities}{Name:\enspace\makebox[1in]{\hrulefill}}
+\runningheader{}{}{}
+
+\usepackage{fontspec,realscripts}
+\defaultfontfeatures{Ligatures=TeX}
+%\setmainfont{Meta Serif Pro}
+%\setsansfont{Meta Pro}
+\frenchspacing
+% - box points & center in the right margin w/ custom setup@point@toks
+\boxedpoints
+\pointsinrightmargin
+\marginbonuspointname{\textsc{up}}
+\makeatletter% rewrite setup@point@toks assuming right margins
+\def\clap#1{\hbox to 0pt{\hss#1\hss}}% define \clap as per https://www.tug.org/TUGboat/tb22-4/tb72perlS.pdf
+\def\setup@point@toks{%
+	\point@toks={%
+		\rlap{\hskip-\@totalleftmargin
+			  \hskip\textwidth
+			  \hskip\@rightmargin
+			  \hskip-\rightpointsmargin
+			  \clap{\padded@point@block}% change \llap to \clap
+		}%
+		\global \point@toks={}%
+	}%
+}% end setup@point@toks
+\setlength{\rightpointsmargin}{.5in}% assuming the default 1" margins
+\makeatother
+% - adjust the top and bottom margins
+\extraheadheight{.25in}
+\extrafootheight{-.5in}
+\setlength{\marginparwidth}{1.5in}
+% NB: remember to use \newpage after the last question
+
+\usepackage{multicol}
+
+\begin{document}
+
+Solve the following equations or inequalities for \(x\):
+
+\begin{questions}
+\begin{multicols}{2}
+
+\question
+\(p + 2x = q - x\)
+
+\vspace{1in}
+
+\question
+\(\displaystyle \frac{x}{a} + \frac{b}{c} = \frac{d}{e}\)
+
+\vspace{1.5in}
+
+\question
+\(ax + b = cx + d\)
+
+\vspace{1.5in}
+
+\question
+\(\displaystyle \frac{kx + b}{m} = \frac{nx + c}{p}\)
+
+\vspace{2in}
+
+\question
+\(k(x + a) + b = m(x - c) + d\)
+
+\vspace{2in}
+
+\question
+\(ax - b \leq cx + d\)
+
+\vspace{2in}
+
+\question
+\(\displaystyle \frac{2x + 3}{5} \leq \frac{4 - 3x}{4}\)
+
+\vspace{2in}
+
+\question
+\(ax + b > 2x - 5\)
+
+\vspace{2in}
+
+\end{multicols}
+\end{questions}
+
+\end{document}
