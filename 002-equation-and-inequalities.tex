@@ -1,0 +1,172 @@
+% -*- program: xelatex -*-
+\documentclass[10pt]{exam}
+\pagestyle{head}
+\firstpageheader{\today}{Equation and Inequalities}{Name:\enspace\makebox[1in]{\hrulefill}}
+\runningheader{}{}{}
+\usepackage{amsmath}
+\usepackage{fontspec,realscripts}
+\defaultfontfeatures{Ligatures=TeX}
+%\setmainfont{Meta Serif Pro}
+%\setsansfont{Meta Pro}
+\frenchspacing
+% - box points & center in the right margin w/ custom setup@point@toks
+\boxedpoints
+\pointsinrightmargin
+\marginbonuspointname{\textsc{up}}
+\makeatletter% rewrite setup@point@toks assuming right margins
+\def\clap#1{\hbox to 0pt{\hss#1\hss}}% define \clap as per https://www.tug.org/TUGboat/tb22-4/tb72perlS.pdf
+\def\setup@point@toks{%
+	\point@toks={%
+		\rlap{\hskip-\@totalleftmargin
+			  \hskip\textwidth
+			  \hskip\@rightmargin
+			  \hskip-\rightpointsmargin
+			  \clap{\padded@point@block}% change \llap to \clap
+		}%
+		\global \point@toks={}%
+	}%
+}% end setup@point@toks
+\setlength{\rightpointsmargin}{.5in}% assuming the default 1" margins
+\makeatother
+% - adjust the top and bottom margins
+\extraheadheight{.25in}
+\extrafootheight{-.5in}
+\setlength{\marginparwidth}{1.5in}
+% NB: remember to use \newpage after the last question
+
+\usepackage{multicol}
+
+\begin{document}
+
+Solve the following equations or inequalities for \(x\) or \(y\):
+
+\begin{questions}
+\begin{multicols}{2}
+
+\question
+\(\displaystyle a(bx + c) = d(ex - f) \)
+
+\vspace*{1.6in}
+
+\question
+\(\displaystyle \frac{ay + b}{c} - \frac{dy + e}{f} = g \)
+
+\vspace*{1.8in}
+
+\question
+\(\displaystyle (ax + b) + k(cx + d) = e + m(fx + g) \)
+
+\vspace*{1.9in}
+
+\question
+\(\displaystyle p(qx - r) > s(tx + u) \)
+
+\vspace*{1.7in}
+
+\question
+\(\displaystyle \frac{ax + b}{c} + \frac{dx - e}{f} = \frac{g}{h} \)
+
+\vspace*{1.6in}
+
+\question
+\(\displaystyle \frac{kx + l}{m} \leq \frac{nx - o}{p} + q \)
+
+\vspace*{1.8in}
+
+\question
+\(\displaystyle a(bx - c) - d(ex + f) = g(hx - i) + j \)
+
+\vspace*{1.9in}
+
+\question
+\(\displaystyle m(nx + p) - q(rx - s) < t(ux + v) + w \)
+
+\vspace*{1.7in}
+
+\end{multicols}
+\end{questions}
+
+\newpage
+
+\begin{multicols*}{2}
+\begin{enumerate}
+\item \( a(bx + c) = d(ex - f) \)
+
+\( abx + ac = dex - df \)
+
+\( abx - dex = -df - ac \)
+
+\( x(ab - de) = -df - ac \)
+
+\(\displaystyle x = \frac{-df - ac}{ab - de} \)
+
+\item \(\displaystyle \frac{ay + b}{c} - \frac{dy + e}{f} = g \)
+
+\(\displaystyle \frac{f(ay + b) - c(dy + e)}{cf} = g \)
+
+\( f(ay + b) - c(dy + e) = gcf \)
+
+\( fay + fb - cdy - ce = gcf \)
+
+\( (fa - cd)y = gcf - fb + ce \)
+
+\(\displaystyle y = \frac{gcf - fb + ce}{fa - cd} \)
+
+\item \( (ax + b) + k(cx + d) = e + m(fx + g) \)
+
+\( ax + b + kcx + kd = e + mfx + mg \)
+
+\( (a + kc - mf)x = e + mg - b - kd \)
+
+\(\displaystyle x = \frac{e + mg - b - kd}{a + kc - mf} \)
+
+\item \( p(qx - r) > s(tx + u) \)
+
+\( pqx - pr > stx + su \)
+
+\( pqx - stx > su + pr \)
+
+\( x(pq - st) > su + pr \)
+
+\(\displaystyle x > \frac{su + pr}{pq - st} \)
+
+\item \(\displaystyle \frac{ax + b}{c} + \frac{dx - e}{f} = \frac{g}{h} \)
+
+\(\displaystyle \frac{f(ax + b) + c(dx - e)}{cf} = \frac{g}{h} \)
+
+\(\displaystyle f(ax + b) + c(dx - e) = \frac{gcf}{h} \)
+
+\(\displaystyle (af + cd)x = \frac{gcf}{h} - fb + ce \)
+
+\(\displaystyle x = \frac{\frac{gcf}{h} - fb + ce}{af + cd} \)
+
+\item \(\displaystyle \frac{kx + l}{m} \leq \frac{nx - o}{p} + q \)
+
+\(\displaystyle \frac{p(kx + l)}{mp} \leq \frac{m(nx - o)}{mp} + \frac{mq}{mp} \)
+
+\( p(kx + l) \leq m(nx - o) + mpq \)
+
+\( (pk - mn)x \leq -pl + mo + mpq \)
+
+\(\displaystyle x \leq \frac{-pl + mo + mpq}{pk - mn} \)
+
+\item \( a(bx - c) - d(ex + f) = g(hx - i) + j \)
+
+\( abx - ac - dex - df = ghx - gi + j \)
+
+\( (ab - de - gh)x = -ac + df + gi + j \)
+
+\(\displaystyle x = \frac{-ac + df + gi + j}{ab - de - gh} \)
+
+\item \( m(nx + p) - q(rx - s) < t(ux + v) + w \)
+
+\( mnx + mp - qrx + qs < tux + tv + w \)
+
+\( (mn - qr - tu)x < tv + w - mp - qs \)
+
+\(\displaystyle x < \frac{tv + w - mp - qs}{mn - qr - tu} \)
+
+\end{enumerate}
+\end{multicols*}
+
+\end{document}
