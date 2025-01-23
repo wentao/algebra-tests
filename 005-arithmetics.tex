@@ -1,0 +1,132 @@
+% -*- program: xelatex -*-
+\documentclass[10pt]{exam}
+\pagestyle{head}
+\firstpageheader{\today}{Equation and Inequalities}{Name:\enspace\makebox[1in]{\hrulefill}}
+\runningheader{}{}{}
+\usepackage{amsmath}
+\usepackage{fontspec,realscripts}
+\defaultfontfeatures{Ligatures=TeX}
+%\setmainfont{Meta Serif Pro}
+%\setsansfont{Meta Pro}
+\frenchspacing
+% - box points & center in the right margin w/ custom setup@point@toks
+\boxedpoints
+\pointsinrightmargin
+\marginbonuspointname{\textsc{up}}
+\makeatletter% rewrite setup@point@toks assuming right margins
+\def\clap#1{\hbox to 0pt{\hss#1\hss}}% define \clap as per https://www.tug.org/TUGboat/tb22-4/tb72perlS.pdf
+\def\setup@point@toks{%
+	\point@toks={%
+		\rlap{\hskip-\@totalleftmargin
+			  \hskip\textwidth
+			  \hskip\@rightmargin
+			  \hskip-\rightpointsmargin
+			  \clap{\padded@point@block}% change \llap to \clap
+		}%
+		\global \point@toks={}%
+	}%
+}% end setup@point@toks
+\setlength{\rightpointsmargin}{.5in}% assuming the default 1" margins
+\makeatother
+% - adjust the top and bottom margins
+\extraheadheight{.25in}
+\extrafootheight{-.5in}
+\setlength{\marginparwidth}{1.4in}
+
+\usepackage{multicol}
+
+\begin{document}
+
+\begin{questions}
+\begin{multicols}{2}
+\question \( 12 + 34 \)
+\vspace*{0.5in}
+
+\question \( 56 - 23 \)
+\vspace*{0.5in}
+
+\question \( 78 \times 3 \)
+\vspace*{0.5in}
+
+\question \( 144 \div 12 \)
+\vspace*{0.5in}
+
+\question \( 5.67 + 8.45 \)
+\vspace*{0.5in}
+
+\question \( 9.81 - 3.14 \)
+\vspace*{0.5in}
+
+\question \( \displaystyle \frac{9}{14} + \frac{5}{2} \)
+\vspace*{0.5in}
+
+\question \( \displaystyle 3 - \frac{9}{8} \)
+\vspace*{0.5in}
+
+\question \( \displaystyle \frac{15}{16} \times \frac{4}{5} \)
+\vspace*{0.5in}
+
+\question \( \displaystyle -\frac{7}{2} \div 2 \)
+\vspace*{0.5in}
+
+\question \( 200 + 150 \)
+\vspace*{0.5in}
+
+\question \( 300 - 175 \)
+\vspace*{0.5in}
+
+\question \( 50 \times 4 \)
+\vspace*{0.5in}
+
+\question \( 81 \div 9 \)
+\vspace*{0.5in}
+
+\question \( 1.23 + 4.56 \)
+\vspace*{0.5in}
+
+\question \( 7.89 - 2.34 \)
+\vspace*{0.5in}
+
+\question \( \displaystyle \frac{23}{18} + \frac{2}{3} \)
+\vspace*{0.5in}
+
+\question \( \displaystyle \frac{3}{10} - \frac{18}{5} \)
+\vspace*{0.5in}
+
+\question \( \displaystyle \frac{14}{9} \times \frac{27}{49} \)
+\vspace*{0.5in}
+
+\question \( \displaystyle \frac{8}{3} \div \frac{5}{11} \)
+\vspace*{0.5in}
+
+\end{multicols}
+\end{questions}
+
+\newpage
+
+\begin{multicols*}{2}
+\begin{enumerate}
+\item \( 46 \)
+\item \( 33 \)
+\item \( 234 \)
+\item \( 12 \)
+\item \( 14.12 \)
+\item \( 6.67 \)
+\item \(\displaystyle \frac{22}{7} \)
+\item \(\displaystyle \frac{15}{8} \)
+\item \(\displaystyle \frac{3}{4} \)
+\item \(\displaystyle -\frac{7}{4} \)
+\item \( 350 \)
+\item \( 125 \)
+\item \( 200 \)
+\item \( 9 \)
+\item \( 5.79 \)
+\item \( 5.55 \)
+\item \(\displaystyle \frac{35}{18} \)
+\item \(\displaystyle -\frac{33}{10} \)
+\item \(\displaystyle \frac{6}{7} \)
+\item \(\displaystyle \frac{88}{15} \)
+\end{enumerate}
+\end{multicols*}
+
+\end{document}
